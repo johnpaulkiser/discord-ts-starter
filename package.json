@@ -1,0 +1,38 @@
+{
+  "name": "discord-ts-starter",
+  "version": "0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": "16.10.0"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0"
+  },
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "ts-node ./src/deploy-commands.ts && nodemon ./src/index.ts",
+    "postinstall": "tsc",
+    "deploy-heroku": "node ./dist/index.js",
+    "deploy-commands": "ts-node deploy-commands.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.2",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "description": "Simple Discord starter bot w/ Typescript",
+  "repository": "https://github.com/johnpaulkiser/discord-ts-starter",
+  "author": "JP Kiser <johnpaulkiser@gmail.com>"
+}
