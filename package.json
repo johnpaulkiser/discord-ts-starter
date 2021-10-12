@@ -18,7 +18,7 @@
     "dev": "ts-node ./src/deploy-commands.ts && nodemon ./src/index.ts",
     "postinstall": "tsc",
     "deploy-heroku": "node ./dist/index.js",
-    "deploy-commands": "ts-node deploy-commands.ts"
+    "deploy-commands": "ts-node ./src/deploy-commands.ts"
   },
   "devDependencies": {
     "@types/node": "^16.10.2",

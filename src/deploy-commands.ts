@@ -6,6 +6,8 @@ import commands from './commands'
 const rest = new REST({ version: '9' }).setToken(token as string)
 
 rest
-  .put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
+  .put(Routes.applicationGuildCommands(clientId, guildId), { 
+    body: commands.map((c) => c.data.toJSON()), 
+  })
   .then(() => console.log('Registered commands', commands))
   .catch(console.error)
